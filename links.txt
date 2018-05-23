@@ -1,4 +1,4 @@
-Crawl with JS - Prepare Data and Learn with R - Run tournament X times with python
+﻿Crawl with JS - Prepare Data and Learn with R - Run tournament X times with python
 	https://notebooks.azure.com/sorinpeste/libraries/footballpred/html/worldcup.ipynb
 	https://github.com/neaorin/PredictTheWorldCup
 
@@ -17,3 +17,53 @@ General ML Approach with FIFA Dataset
 
 Master Thesis - Predicting Football Matches with RNNs
 	http://publications.lib.chalmers.se/records/fulltext/250411/250411.pdf
+
+
+Deep Neural Network (DNN) Football/Soccer Predictor (Python)
+	https://github.com/AndrewCarterUK/football-predictor
+
+
+
+
+Data Sources
+	http://www.stats.com/football/
+	http://instatfootball.com/
+	football-data.co.uk
+
+
+
+
+[2] Burak Galip Aslan and Mustafa Murat Inceoglu. “A comparative study on
+neural network based soccer result prediction”. In: Intelligent Systems Design
+and Applications, 2007. ISDA 2007. Seventh International Conference
+on. IEEE. 2007, pp. 545–550.
+
+Basketball
+[18] Jordan Gumm, Andrew Barrett, and Gongzhu Hu. “A machine learning strategy
+for predicting march madness winners”. In: Software Engineering, Arti-
+ficial Intelligence, Networking and Parallel/Distributed Computing (SNPD),
+2015 16th IEEE/ACIS International Conference on. IEEE. 2015, pp. 1–6
+
+Football
+[23] Josip Hucaljuk and Alen Rakipović. “Predicting football scores using machine
+learning techniques”. In: MIPRO, 2011 Proceedings of the 34th International
+Convention. IEEE. 2011, pp. 1623–1627.
+
+Matches played by Tottenham Hotspurs
+[24] Anito Joseph, Norman E Fenton, and Martin Neil. “Predicting football results
+using Bayesian nets and other machine learning techniques”. In: KnowledgeBased
+Systems 19.7 (2006), pp. 544–553.
+
+
+
+
+
+
+
+
+
+http://neuroph.sourceforge.net/tutorials/SportsPrediction/Premier%20League%20Prediction.html
+
+
+
+
