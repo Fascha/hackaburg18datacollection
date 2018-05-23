@@ -1,0 +1,19 @@
+Crawl with JS - Prepare Data and Learn with R - Run tournament X times with python
+	https://notebooks.azure.com/sorinpeste/libraries/footballpred/html/worldcup.ipynb
+	https://github.com/neaorin/PredictTheWorldCup
+
+
+Data Driven approach - Visualisations and analysis
+	https://towardsdatascience.com/fifa-world-cup-2018-a-data-driven-approach-to-ideal-team-line-ups-93505cfe36f8
+
+
+World Cup 2014
+	https://github.com/fisadev/world_cup_learning
+
+
+General ML Approach with FIFA Dataset
+	https://www.uruit.com/blog/2018/02/16/soccer-and-machine-learning-tutorial/
+
+
+Master Thesis - Predicting Football Matches with RNNs
+	http://publications.lib.chalmers.se/records/fulltext/250411/250411.pdf
