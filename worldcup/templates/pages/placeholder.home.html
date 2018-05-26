@@ -1,0 +1,538 @@
+{% extends 'layouts/main.html' %}
+{% block title %} FIFA world cup 18{% endblock %}
+{% block content %}
+
+<div class="page-header">
+  <h1>Groups</h1>
+</div>
+
+    <div class="container" id="group_table" >
+        <div class="row">
+            <div class="col">
+                <table>
+                    <tr><td>Group A</td><td></td><td>
+                        <button type="button" class="btn btn-xs" data-toggle="modal" data-target="#modal_a" style="color:#f3f3f3">
+                            <p style="color: #000;">details</p>
+                        </button></td></tr>
+                    <tr id = "A1"></tr>
+                    <tr id = "A2"> </tr>
+                    <tr id = "A3"></tr>
+                    <tr id = "A4"></tr>
+                </table>
+            </div>
+            <div class="col">
+                 <table>
+                    <tr><td>Group B</td><td></td><td>
+                        <button type="button" class="btn btn-xs" data-toggle="modal" data-target="#modal_b" style="color:#f3f3f3">
+                            <p style="color: #000;">details</p>
+                        </button></td></tr>
+                    <tr id = "B1"></tr>
+                    <tr id = "B2"></tr>
+                    <tr id = "B3"></tr>
+                    <tr id = "B4"></tr>
+                </table>
+            </div>
+            <div class="col">
+                 <table>
+                    <tr><td>Group C</td><td></td><td>
+                        <button type="button" class="btn btn-xs" data-toggle="modal" data-target="#modal_c" style="color:#f3f3f3">
+                            <p style="color: #000;">details</p>
+                        </button></td></tr>
+                    <tr id = "C1"></tr>
+                    <tr id = "C2"></tr>
+                    <tr id = "C3"></tr>
+                    <tr id = "C4"></tr>
+                </table>
+            </div>
+            <div class="col">
+                 <table>
+                    <tr><td>Group D</td><td></td><td>
+                        <button type="button" class="btn btn-xs" data-toggle="modal" data-target="#modal_d" style="color:#f3f3f3">
+                            <p style="color: #000;">details</p>
+                        </button></td></tr>
+                    <tr id = "D1"></tr>
+                    <tr id = "D2"></tr>
+                    <tr id = "D3"></tr>
+                    <tr id = "D4"></tr>
+                </table>
+            </div>
+        </div>
+        <br>
+        <br>
+    <div class="row">
+            <div class="col">
+                 <table>
+                    <tr><td>Group E</td><td></td><td>
+                        <button type="button" class="btn btn-xs" data-toggle="modal" data-target="#modal_e" style="color:#f3f3f3">
+                            <p style="color: #000;">details</p>
+                        </button></td></tr>
+                    <tr id = "E1"></tr>
+                    <tr id = "E2"></tr>
+                    <tr id = "E3"></tr>
+                    <tr id = "E4"></tr>
+                </table>
+            </div>
+            <div class="col">
+                 <table>
+                    <tr><td>Group F</td><td></td><td>
+                        <button type="button" class="btn btn-xs" data-toggle="modal" data-target="#modal_f" style="color:#f3f3f3">
+                            <p style="color: #000;">details</p>
+                        </button></td></tr>
+                    <tr id = "F1"></tr>
+                    <tr id = "F2"></tr>
+                    <tr id = "F3"></tr>
+                    <tr id = "F4"></tr>
+                </table>
+            </div>
+            <div class="col">
+                 <table>
+                    <tr><td>Group G</td><td></td><td>
+                        <button type="button" class="btn btn-xs" data-toggle="modal" data-target="#modal_g" style="color:#f3f3f3">
+                            <p style="color: #000;">details</p>
+                        </button></td></tr>
+                    <tr id = "G1"></tr>
+                    <tr id = "G2"></tr>
+                    <tr id = "G3"></tr>
+                    <tr id = "G4"></tr>
+                </table>
+            </div>
+            <div class="col">
+                 <table>
+                    <tr><td>Group H</td><td></td><td>
+                        <button type="button" class="btn btn-xs" data-toggle="modal" data-target="#modal_h" style="color:#f3f3f3">
+                            <p style="color: #000;">details</p>
+                        </button></td></tr>
+                    <tr id = "H1"></tr>
+                    <tr id = "H2"></tr>
+                    <tr id = "H3"></tr>
+                    <tr id = "H4"></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <br>
+    <div class="page-header">
+  <h1>Matchplan</h1>
+</div>
+    <div id="match_plan" style="font-size: large">
+        <div class="row">
+            <div class="col" id="A1_1">a1</div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col" id="B1">b1</div>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col" id="WA1B2">wa1b2</div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col" id="WB1A2">wb1a2</div>
+            <div class="col"></div>
+        </div>
+        <div class="row">
+            <div class="col" id="B2">b2</div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col" id="A2">a2</div>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col" id="SEM1">sem1</div>
+            <div class="col"></div>
+              <div class="col" id="sem2">sem2</div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+        <div class="row">
+            <div class="col" id="C1">c1</div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col" id="D1">d1</div>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col" id="WC1D2">wc1d2</div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col" id="WD1C2">wd1c2</div>
+            <div class="col"></div>
+        </div>
+        <div class="row">
+            <div class="col" id="D2">d2</div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col" id="C2">c2</div>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col" id="SEMI">
+                <table>
+                    <tr id ="FINAL1">FINAL1</tr><br>
+                    <tr id ="FINAL2">FINAL2</tr>
+                </table>
+            </div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+        <div class="row">
+            <div class="col" id="E1">e1</div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col" id="F1">f1</div>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col" id="WE1F2">we1f2</div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col" id="WF1E2">wf1e2</div>
+            <div class="col"></div>
+        </div>
+        <div class="row">
+            <div class="col" id="F2">f2</div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col" id="E2">e2</div>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col" id="SEM3">sem3</div>
+            <div class="col"></div>
+              <div class="col" id="SEM4">sem4</div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+        <div class="row">
+            <div class="col" id="G1">g1</div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col" id="H1">h1</div>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col" id="WG1H2">wg1h2</div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col" id="WH1G2">wh1g2</div>
+            <div class="col"></div>
+        </div>
+        <div class="row">
+            <div class="col" id="h2">h2</div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col" id="g2">g2</div>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col" id="SEMI">
+                <table>
+                    <tr id="WINNER">WINNER</tr>
+                </table>
+            </div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <div id="user_input">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <input id="slider1"  type="range" />
+                <input id="slider1"  type="range" />
+                <input id="slider1"  type="range" />
+            </div>
+        </div>
+    </div>
+
+    <!--- MODALS---->
+    <div class="modal" id="modal_a">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">detail results: group a</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body" id="content_ga">
+                    {{ groupa|safe }}
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+     <div class="modal" id="modal_b">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">detail results: group b</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    {{ groupb|safe }}
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+     <div class="modal" id="modal_c">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">detail results: group c</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    {{ groupc|safe }}
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+     <div class="modal" id="modal_d">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">detail results: group d</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    {{ groupd|safe }}
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+     <div class="modal" id="modal_e">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">detail results: group e</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    {{ groupe|safe }}
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+     <div class="modal" id="modal_f">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">detail results: group f</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    {{ groupf|safe }}
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+     <div class="modal" id="modal_g">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">detail results: group g</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    {{ groupg|safe }}
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+     <div class="modal" id="modal_h">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">detail results: group h</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    {{ grouph|safe }}
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            // fill static groups
+            $("#A1").html(get_conchtml_table("RUS", ""));
+            $("#A2").html(get_conchtml_table("KSA", ""));
+            $("#A3").html(get_conchtml_table("EGY", ""));
+            $("#A4").html(get_conchtml_table("URU", ""));
+
+            $("#B1").html(get_conchtml_table("POR", ""));
+            $("#B2").html(get_conchtml_table("ESP", ""));
+            $("#B3").html(get_conchtml_table("MAR", ""));
+            $("#B4").html(get_conchtml_table("IRN", ""));
+
+            $("#C1").html(get_conchtml_table("FRA", ""));
+            $("#C2").html(get_conchtml_table("AUS", ""));
+            $("#C3").html(get_conchtml_table("PER", ""));
+            $("#C4").html(get_conchtml_table("DEN", ""));
+
+            $("#D1").html(get_conchtml_table("ARG", ""));
+            $("#D2").html(get_conchtml_table("ISL", ""));
+            $("#D3").html(get_conchtml_table("CRO", ""));
+            $("#D4").html(get_conchtml_table("NGA", ""));
+
+            $("#E1").html(get_conchtml_table("BRA", ""));
+            $("#E2").html(get_conchtml_table("SUI", ""));
+            $("#E3").html(get_conchtml_table("CRC", ""));
+            $("#E4").html(get_conchtml_table("SRB", ""));
+
+            $("#F1").html(get_conchtml_table("GER", ""));
+            $("#F2").html(get_conchtml_table("MEX", ""));
+            $("#F3").html(get_conchtml_table("SWE", ""));
+            $("#F4").html(get_conchtml_table("KOR", ""));
+
+            $("#G1").html(get_conchtml_table("BEL", ""));
+            $("#G2").html(get_conchtml_table("PAN", ""));
+            $("#G3").html(get_conchtml_table("TUN" , ""));
+            $("#G4").html(get_conchtml_table("ENG", ""));
+
+            $("#H1").html(get_conchtml_table("POL", ""));
+            $("#H2").html(get_conchtml_table("SEN", ""));
+            $("#H3").html(get_conchtml_table("COL", ""));
+            $("#H4").html(get_conchtml_table("JPN", ""));
+
+            $("#A1_1").html(get_conchtml_plan("RUS", " 4"));
+
+
+        });
+    
+    function get_conchtml_table(team_ini, points) {
+        return '<td><img src=\"/static/img/' +team_ini+ '.png\" width=\"30\" height=\"10\"></td><td>'+team_ini+' </td><td>'+points+'</td>';
+    }
+
+    function get_conchtml_plan(team_ini, points) {
+        return '<td><img src=\"/static/img/' +team_ini+ '.png\" width=\"30\" height=\"10\"></td><td>'+team_ini+' </td>';
+    }
+
+
+
+    </script>
+{% endblock %}
