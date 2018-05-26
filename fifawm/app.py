@@ -45,7 +45,7 @@ def login_required(test):
 
 @app.route('/')
 def home():
-    df = pd.read_csv('~/hburg/hackaburg18datacollection/flask-boilerplate/static/data/schedule_fifa.csv')
+    df = pd.read_csv('~/hburg/hackaburg18datacollection/fifawm/static/data/schedule_fifa.csv')
     groupa = df.loc[df['Group'] == 'Group A'].to_html(index=False)
     groupb = df.loc[df['Group'] == 'Group B'].to_html(index=False)
     groupc = df.loc[df['Group'] == 'Group C'].to_html(index=False)
