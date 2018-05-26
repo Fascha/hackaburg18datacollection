@@ -3,15 +3,15 @@
 {% block content %}
 
 <div class="page-header">
-    <h1>Groups<button type="button" class="btn btn-primary" onclick="load_gtables">PLAY</button></h1>
+    <h1>Groups<button type="button" class="btn btn-primary" onclick="load_gtables()">PLAY</button></h1>
 </div>
 
     <div class="container" id="group_table" >
         <div class="row">
             <div class="col">
                 <table>
-                    <tr><td>Group A</td><td></td><td>
-                        <button type="button" class="btn btn-xs" data-toggle="modal" data-target="#modal_a" style="color:#f3f3f3">
+                    <tr><td>Group A </td><td></td><td>
+                        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_a" style="color:#f3f3f3;display: none" id="btndt_a">
                             <p style="color: #000;">details</p>
                         </button></td></tr>
                     <tr id = "A1"></tr>
@@ -23,7 +23,7 @@
             <div class="col">
                  <table>
                     <tr><td>Group B</td><td></td><td>
-                        <button type="button" class="btn btn-xs" data-toggle="modal" data-target="#modal_b" style="color:#f3f3f3">
+                        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_b" style="color:#f3f3f3;display: none"  id="btndt_b">
                             <p style="color: #000;">details</p>
                         </button></td></tr>
                     <tr id = "B1"></tr>
@@ -35,7 +35,7 @@
             <div class="col">
                  <table>
                     <tr><td>Group C</td><td></td><td>
-                        <button type="button" class="btn btn-xs" data-toggle="modal" data-target="#modal_c" style="color:#f3f3f3">
+                        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_c" style="color:#f3f3f3;display: none"  id="btndt_c">
                             <p style="color: #000;">details</p>
                         </button></td></tr>
                     <tr id = "C1"></tr>
@@ -47,7 +47,7 @@
             <div class="col">
                  <table>
                     <tr><td>Group D</td><td></td><td>
-                        <button type="button" class="btn btn-xs" data-toggle="modal" data-target="#modal_d" style="color:#f3f3f3">
+                        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_d" style="color:#f3f3f3;display: none"  id="btndt_d">
                             <p style="color: #000;">details</p>
                         </button></td></tr>
                     <tr id = "D1"></tr>
@@ -63,7 +63,7 @@
             <div class="col">
                  <table>
                     <tr><td>Group E</td><td></td><td>
-                        <button type="button" class="btn btn-xs" data-toggle="modal" data-target="#modal_e" style="color:#f3f3f3">
+                        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_e" style="color:#f3f3f3;display: none"  id="btndt_e">
                             <p style="color: #000;">details</p>
                         </button></td></tr>
                     <tr id = "E1"></tr>
@@ -75,7 +75,7 @@
             <div class="col">
                  <table>
                     <tr><td>Group F</td><td></td><td>
-                        <button type="button" class="btn btn-xs" data-toggle="modal" data-target="#modal_f" style="color:#f3f3f3">
+                        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_f" style="color:#f3f3f3;display: none"  id="btndt_f">
                             <p style="color: #000;">details</p>
                         </button></td></tr>
                     <tr id = "F1"></tr>
@@ -87,7 +87,7 @@
             <div class="col">
                  <table>
                     <tr><td>Group G</td><td></td><td>
-                        <button type="button" class="btn btn-xs" data-toggle="modal" data-target="#modal_g" style="color:#f3f3f3">
+                        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_g" style="color:#f3f3f3;display: none"  id="btndt_g">
                             <p style="color: #000;">details</p>
                         </button></td></tr>
                     <tr id = "G1"></tr>
@@ -99,7 +99,7 @@
             <div class="col">
                  <table>
                     <tr><td>Group H</td><td></td><td>
-                        <button type="button" class="btn btn-xs" data-toggle="modal" data-target="#modal_h" style="color:#f3f3f3">
+                        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_h" style="color:#f3f3f3;display: none"  id="btndt_h">
                             <p style="color: #000;">details</p>
                         </button></td></tr>
                     <tr id = "H1"></tr>
@@ -535,10 +535,22 @@
         $("#A1_1").html(get_conchtml_plan("RUS", " 4"));
     }
     function load_gtables() {
-        
+        show_buttons();
     }
+
     function adjust_settings() {
-        
+
+    }
+    function show_buttons() {
+        $("#btndt_a").show()
+        $("#btndt_b").show()
+        $("#btndt_c").show()
+        $("#btndt_d").show()
+        $("#btndt_e").show()
+        $("#btndt_f").show()
+        $("#btndt_g").show()
+        $("#btndt_h").show()
+
     }
 
     </script>
