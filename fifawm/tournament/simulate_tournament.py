@@ -142,8 +142,8 @@ class Tournament(object):
                                                 match.match.team1, 
                                                 match.match.team2, 
                                                 match.match.group, 
-                                                '{}-{}'.format(match.team1Score, 
-                                                                match.team2Score)]], 
+                                                '{}-{}'.format(int(match.team1Score),
+                                                                int(match.team2Score))]],
                                                 columns=columns))
             
 
@@ -154,8 +154,8 @@ class Tournament(object):
                                                     match.match.team1, 
                                                     match.match.team2, 
                                                     match.match.group, 
-                                                    '{}-{}'.format(match.team1Score, 
-                                                                    match.team2Score)]], 
+                                                    '{}-{}'.format(int(match.team1Score),
+                                                                    int(match.team2Score))]],
                                                     columns=columns))
 
         return group_winners, new_df, group_table_total
