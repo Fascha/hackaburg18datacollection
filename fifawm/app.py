@@ -11,6 +11,7 @@ import pandas as pd
 import re
 import os
 
+from tournament.simulate_tournament import Tournament
 #----------------------------------------------------------------------------#
 # App Config.
 #----------------------------------------------------------------------------#
@@ -48,6 +49,10 @@ def home():
     filepath = os.path.join(os.getcwd(), 'static', 'data', 'schedule_fifa.csv')
     # df = pd.read_csv('~/hburg/hackaburg18datacollection/fifawm/static/data/schedule_fifa.csv')
     df = pd.read_csv(filepath)
+
+    tourney = Tournament()
+    
+    print(tourney.get_tournament_prediction())
 
     groupa = df.loc[df['Group'] == 'Group A'].to_html(index=False)
     groupb = df.loc[df['Group'] == 'Group B'].to_html(index=False)
