@@ -67,6 +67,7 @@ def home():
                            groupe=groupe, groupf=groupf, groupg=groupg, grouph=grouph)
 
 
+
 @app.route('/about')
 def about():
     return render_template('pages/placeholder.about.html')
