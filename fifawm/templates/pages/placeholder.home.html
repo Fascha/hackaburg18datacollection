@@ -3,7 +3,7 @@
 {% block content %}
 
 <div class="page-header">
-    <h1>Groups<button type="button" class="btn btn-primary" onclick="load_gtables()">PLAY</button></h1>
+    <h1>Groups <a href="/get_tournament"><button type="button" class="btn btn-primary">simulate again</button></a> </h1>
 </div>
 
     <div class="container" id="group_table" >
@@ -11,7 +11,7 @@
             <div class="col">
                 <table>
                     <tr><td>Group A </td><td></td><td>
-                        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_a" style="color:#f3f3f3;display: none" id="btndt_a">
+                        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_a" style="color:#f3f3f3" id="btndt_a">
                             <p style="color: #000;">details</p>
                         </button></td></tr>
                     <tr id = "A1"></tr>
@@ -23,7 +23,7 @@
             <div class="col">
                  <table>
                     <tr><td>Group B</td><td></td><td>
-                        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_b" style="color:#f3f3f3;display: none"  id="btndt_b">
+                        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_b" style="color:#f3f3f3"  id="btndt_b">
                             <p style="color: #000;">details</p>
                         </button></td></tr>
                     <tr id = "B1"></tr>
@@ -35,7 +35,7 @@
             <div class="col">
                  <table>
                     <tr><td>Group C</td><td></td><td>
-                        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_c" style="color:#f3f3f3;display: none"  id="btndt_c">
+                        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_c" style="color:#f3f3f3"  id="btndt_c">
                             <p style="color: #000;">details</p>
                         </button></td></tr>
                     <tr id = "C1"></tr>
@@ -47,11 +47,11 @@
             <div class="col">
                  <table>
                     <tr><td>Group D</td><td></td><td>
-                        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_d" style="color:#f3f3f3;display: none"  id="btndt_d">
+                        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_d" style="color:#f3f3f3;"  id="btndt_d">
                             <p style="color: #000;">details</p>
                         </button></td></tr>
                     <tr id = "D1"></tr>
-                    <tr id = "D2"></tr>
+                    <tr id = "D2">{{ dtwo }}</tr>
                     <tr id = "D3"></tr>
                     <tr id = "D4"></tr>
                 </table>
@@ -63,7 +63,7 @@
             <div class="col">
                  <table>
                     <tr><td>Group E</td><td></td><td>
-                        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_e" style="color:#f3f3f3;display: none"  id="btndt_e">
+                        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_e" style="color:#f3f3f3; none"  id="btndt_e">
                             <p style="color: #000;">details</p>
                         </button></td></tr>
                     <tr id = "E1"></tr>
@@ -75,7 +75,7 @@
             <div class="col">
                  <table>
                     <tr><td>Group F</td><td></td><td>
-                        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_f" style="color:#f3f3f3;display: none"  id="btndt_f">
+                        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_f" style="color:#f3f3f3"  id="btndt_f">
                             <p style="color: #000;">details</p>
                         </button></td></tr>
                     <tr id = "F1"></tr>
@@ -87,7 +87,7 @@
             <div class="col">
                  <table>
                     <tr><td>Group G</td><td></td><td>
-                        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_g" style="color:#f3f3f3;display: none"  id="btndt_g">
+                        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_g" style="color:#f3f3f3"  id="btndt_g">
                             <p style="color: #000;">details</p>
                         </button></td></tr>
                     <tr id = "G1"></tr>
@@ -99,7 +99,7 @@
             <div class="col">
                  <table>
                     <tr><td>Group H</td><td></td><td>
-                        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_h" style="color:#f3f3f3;display: none"  id="btndt_h">
+                        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_h" style="color:#f3f3f3"  id="btndt_h">
                             <p style="color: #000;">details</p>
                         </button></td></tr>
                     <tr id = "H1"></tr>
@@ -110,7 +110,7 @@
             </div>
         </div>
     </div>
-
+    <br><br><br>
     <div class="page-header">
         <h1>Matchplan <button type="button" class="btn btn-primary" onclick="setTimeout(start_show, 3000)">PLAY</button></h1>
 
@@ -127,7 +127,7 @@
         </div>
         <div class="row">
             <div class="col"></div>
-            <div class="col" id="WA1B2">winner</div>
+            <div class="col" id="WA1B2"></div>
             <div class="col"></div>
             <div class="col"></div>
             <div class="col"></div>
@@ -270,6 +270,12 @@
             <div class="col"></div>
         </div>
     </div>
+    <br><br><br>
+    <div class="page-header">
+    <h1>Statistics</h1>
+    </div>
+    <div id="statisitcs"></div>
+    <br><br><br>
 
     <div class="page-header">
         <h1>Adjust <button type="button" class="btn btn-primary" onclick="adjust_settings">PLAY</button></h1>

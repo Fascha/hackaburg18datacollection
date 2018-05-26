@@ -2,6 +2,8 @@
 # Imports
 #----------------------------------------------------------------------------#
 
+
+from __future__ import print_function
 from flask import Flask, render_template, request
 # from flask.ext.sqlalchemy import SQLAlchemy
 import logging
@@ -10,7 +12,6 @@ from forms import *
 import pandas as pd
 import re
 import os
-
 from tournament.simulate_tournament import Tournament
 #----------------------------------------------------------------------------#
 # App Config.
@@ -19,6 +20,7 @@ from tournament.simulate_tournament import Tournament
 app = Flask(__name__)
 app.config.from_object('config')
 #db = SQLAlchemy(app)
+tourney = Tournament()
 
 # Automatically tear down SQLAlchemy.
 '''
@@ -46,26 +48,30 @@ def login_required(test):
 
 @app.route('/')
 def home():
-    filepath = os.path.join(os.getcwd(), 'static', 'data', 'schedule_fifa.csv')
+    # filepath = os.path.join(os.getcwd(), 'static', 'data', 'schedule_fifa.csv')
     # df = pd.read_csv('~/hburg/hackaburg18datacollection/fifawm/static/data/schedule_fifa.csv')
-    df = pd.read_csv(filepath)
-
-    tourney = Tournament()
-    
+    # df = pd.read_csv(filepath)
+    group_winners, new_df, group_table_total = tourney.get_tournament_prediction()
     print(tourney.get_tournament_prediction())
 
-    groupa = df.loc[df['Group'] == 'Group A'].to_html(index=False)
-    groupb = df.loc[df['Group'] == 'Group B'].to_html(index=False)
-    groupc = df.loc[df['Group'] == 'Group C'].to_html(index=False)
-    groupd = df.loc[df['Group'] == 'Group D'].to_html(index=False)
-    groupe = df.loc[df['Group'] == 'Group E'].to_html(index=False)
-    groupf = df.loc[df['Group'] == 'Group F'].to_html(index=False)
-    groupg = df.loc[df['Group'] == 'Group G'].to_html(index=False)
-    grouph = df.loc[df['Group'] == 'Group H'].to_html(index=False)
+    groupa = new_df.loc[new_df['group'] == 'A'].to_html(index=False)
+    groupb = new_df.loc[new_df['group'] == 'B'].to_html(index=False)
+    groupc = new_df.loc[new_df['group'] == 'C'].to_html(index=False)
+    groupd = new_df.loc[new_df['group'] == 'D'].to_html(index=False)
+    groupe = new_df.loc[new_df['group'] == 'E'].to_html(index=False)
+    groupf = new_df.loc[new_df['group'] == 'F'].to_html(index=False)
+    groupg = new_df.loc[new_df['group'] == 'G'].to_html(index=False)
+    grouph = new_df.loc[new_df['group'] == 'H'].to_html(index=False)
+
+    twod = group_winners.get("2D")
+    print(twod)
 
     return render_template('pages/placeholder.home.html', groupa=groupa, groupb=groupb, groupc=groupc, groupd=groupd,
-                           groupe=groupe, groupf=groupf, groupg=groupg, grouph=grouph)
+                           groupe=groupe, groupf=groupf, groupg=groupg, grouph=grouph, twod=twod)
 
+@app.route('/get_tournament', methods=["GET"])
+def get_tournament():
+    tourney.get_tournament_prediction()
 
 
 @app.route('/about')
