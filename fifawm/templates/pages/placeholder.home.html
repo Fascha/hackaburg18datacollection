@@ -692,45 +692,7 @@
     <script>
         $(document).ready(function () {
             // fill static groups
-            $("#A1").html(get_conchtml_table("RUS", ""));
-            $("#A2").html(get_conchtml_table("KSA", ""));
-            $("#A3").html(get_conchtml_table("EGY", ""));
-            $("#A4").html(get_conchtml_table("URU", ""));
 
-            $("#B1").html(get_conchtml_table("POR", ""));
-            $("#B2").html(get_conchtml_table("ESP", ""));
-            $("#B3").html(get_conchtml_table("MAR", ""));
-            $("#B4").html(get_conchtml_table("IRN", ""));
-
-            $("#C1").html(get_conchtml_table("FRA", ""));
-            $("#C2").html(get_conchtml_table("AUS", ""));
-            $("#C3").html(get_conchtml_table("PER", ""));
-            $("#C4").html(get_conchtml_table("DEN", ""));
-
-            $("#D1").html(get_conchtml_table("ARG", ""));
-            $("#D2").html(get_conchtml_table("ISL", ""));
-            $("#D3").html(get_conchtml_table("CRO", ""));
-            $("#D4").html(get_conchtml_table("NGA", ""));
-
-            $("#E1").html(get_conchtml_table("BRA", ""));
-            $("#E2").html(get_conchtml_table("SUI", ""));
-            $("#E3").html(get_conchtml_table("CRC", ""));
-            $("#E4").html(get_conchtml_table("SRB", ""));
-
-            $("#F1").html(get_conchtml_table("GER", ""));
-            $("#F2").html(get_conchtml_table("MEX", ""));
-            $("#F3").html(get_conchtml_table("SWE", ""));
-            $("#F4").html(get_conchtml_table("KOR", ""));
-
-            $("#G1").html(get_conchtml_table("BEL", ""));
-            $("#G2").html(get_conchtml_table("PAN", ""));
-            $("#G3").html(get_conchtml_table("TUN" , ""));
-            $("#G4").html(get_conchtml_table("ENG", ""));
-
-            $("#H1").html(get_conchtml_table("POL", ""));
-            $("#H2").html(get_conchtml_table("SEN", ""));
-            $("#H3").html(get_conchtml_table("COL", ""));
-            $("#H4").html(get_conchtml_table("JPN", ""));
 
             var table_data = {{ group_table_total |safe  }};    
 
@@ -792,7 +754,7 @@
     return result;
 }
 
-
+    var df_tree = {{ dataframe| safe }}
 
 
 

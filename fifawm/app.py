@@ -52,7 +52,7 @@ def home():
     # df = pd.read_csv('~/hburg/hackaburg18datacollection/fifawm/static/data/schedule_fifa.csv')
     # df = pd.read_csv(filepath)
     group_winners, new_df, group_table_total = tourney.get_tournament_prediction()
-    print(tourney.get_tournament_prediction())
+    print(group_winners, new_df, group_table_total)
 
     groupa = new_df.loc[new_df['group'] == 'A'].to_html(index=False)
     groupb = new_df.loc[new_df['group'] == 'B'].to_html(index=False)
@@ -64,6 +64,7 @@ def home():
     grouph = new_df.loc[new_df['group'] == 'H'].to_html(index=False)
 
     onea = group_winners.get("1A")
+    print(onea)
     twoa = group_winners.get("2A")
     oneb = group_winners.get("1B")
     twob = group_winners.get("2B")
@@ -84,7 +85,7 @@ def home():
     return render_template('pages/placeholder.home.html', groupa=groupa, groupb=groupb, groupc=groupc, groupd=groupd,
                            groupe=groupe, groupf=groupf, groupg=groupg, grouph=grouph, onea=onea, twoa=twoa, oneb=oneb,
                            twob=twob, onec=onec, twoc=twoc,oned=oned,twod=twod,onee=onee,twoe=twoe,onef=onef,twof=twof,
-                           oneg=oneg,twog=twog,oneh=oneh,twoh=twoh, group_table_total=group_table_total)
+                           oneg=oneg,twog=twog,oneh=oneh,twoh=twoh, group_table_total=group_table_total, dataframe=new_df.to_json(orient="values"))
 
 
 
