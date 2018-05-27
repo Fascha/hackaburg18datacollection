@@ -4,7 +4,7 @@
 
 
 from __future__ import print_function
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, Response, send_file, jsonify
 # from flask.ext.sqlalchemy import SQLAlchemy
 import logging
 from logging import Formatter, FileHandler
@@ -87,6 +87,26 @@ def home():
                            oneg=oneg,twog=twog,oneh=oneh,twoh=twoh, group_table_total=group_table_total)
 
 
+
+
+from flask import jsonify
+
+@app.route('/get_tournament_statistics', methods=["GET"])
+def get_tournament_statistics():
+    #return jsonify(['2013-01,53', '2013-02,165'])
+    """return send_file(os.path.join(os.getcwd(), 'templates', 'pages', 'bar-data.csv'),
+                     mimetype='text/csv',
+                     attachment_filename='bar-data.csv',
+                     as_attachment=True)
+    """
+    with open(os.path.join(os.getcwd(), 'templates', 'pages', 'bar-data.csv')) as fp:
+        csv = fp.read()
+    #csv = '1,2,3\n4,5,6\n'
+        return Response(
+            csv,
+            mimetype="text/csv",
+            headers={"Content-disposition":
+                    "attachment; filename=myplot.csv"})
 
 
 @app.route('/about')
