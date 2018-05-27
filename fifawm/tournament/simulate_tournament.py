@@ -17,7 +17,9 @@ class Tournament(object):
     def __init__(self):
         #self.schedule = self.loadCsv('data/wc2018schedule.csv', self.Match)
         self.schedule = self.loadCsv(os.path.join(os.getcwd(), 'tournament', 'data', 'schedule_fifa_fs.csv'), self.Match)
-        self.predictions = self.loadCsv(os.path.join(os.getcwd(), 'tournament', 'data', 'wc2018staticPredictions.csv'), self.Prediction)
+        #self.predictions = self.loadCsv(os.path.join(os.getcwd(), 'tournament', 'data', 'wc2018staticPredictions.csv'), self.Prediction)
+        #self.predictions = self.loadCsv(os.path.join(os.getcwd(), 'tournament', 'data', 'predicted_matchups_static_no_power_ranking.csv'), self.Prediction)
+        self.predictions = self.loadCsv(os.path.join(os.getcwd(), 'tournament', 'data', 'predicted_matchups_static_with_power_ranking.csv'), self.Prediction)
         self.teams = self.loadCsv(os.path.join(os.getcwd(), 'tournament', 'data', 'wc2018qualified.csv'), self.Team)
 
 
@@ -159,3 +161,4 @@ class Tournament(object):
                                                     columns=columns))
 
         return group_winners, new_df, group_table_total
+        

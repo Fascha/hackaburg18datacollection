@@ -85,7 +85,7 @@ def home():
     return render_template('pages/placeholder.home.html', groupa=groupa, groupb=groupb, groupc=groupc, groupd=groupd,
                            groupe=groupe, groupf=groupf, groupg=groupg, grouph=grouph, onea=onea, twoa=twoa, oneb=oneb,
                            twob=twob, onec=onec, twoc=twoc,oned=oned,twod=twod,onee=onee,twoe=twoe,onef=onef,twof=twof,
-                           oneg=oneg,twog=twog,oneh=oneh,twoh=twoh, group_table_total=group_table_total, dataframe=new_df.to_json(orient="values"))
+                           oneg=oneg,twog=twog,oneh=oneh,twoh=twoh, group_table_total=group_table_total, dataframe=new_df.to_json(orient='split'))
 
 
 
