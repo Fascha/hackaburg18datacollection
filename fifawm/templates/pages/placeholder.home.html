@@ -514,7 +514,7 @@
             $("#H3").html(get_conchtml_table("COL", ""));
             $("#H4").html(get_conchtml_table("JPN", ""));
 
-            table_data = {{ group_table_total |safe  }}
+            var table_data = {{ group_table_total |safe  }};    
 
             $("#table_ga").html(makeTableHTML(table_data.A));
             $("#table_gb").html(makeTableHTML(table_data.B));
