@@ -268,8 +268,7 @@
     
 
     <br>
-    <div id='bar-chart-ordinal'></div>
-        <style>
+    <style>
  
             .bar {
               fill: steelblue;
@@ -297,6 +296,8 @@
             }
              
         </style>
+    <div id='bar-chart-power'></div>
+    <div id="bar-chart-no-power"></div>
         <script>
  
             var margin = {top: 20, right: 20, bottom: 50, left: 80},
@@ -319,55 +320,46 @@
                 .orient("left")
                 .ticks(10); //  .ticks(10, "%");
              
-            var svg = d3.select("#bar-chart-ordinal").append("svg")
+            var svg = d3.select("#bar-chart-power").append("svg")
                 .attr("width", width + margin.left + margin.right)
                 .attr("height", height + margin.top + margin.bottom)
                 .append("g")
                 .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-             
-
-            
-            //var countries = ['GER', 'BRA', 'ENG', 'FRA'];
-            //var wins = [123, 321, 321, 223];
-            //var data;
-            //data.countries = countries;
-            //data.wins = wins;
-
 
 
             var data = [
-                {'country': 'BRA', 'wins': 1248},
-                {'country': 'ARG', 'wins': 1101},
-                {'country': 'GER', 'wins': 952},
-                {'country': 'RUS', 'wins': 887},
-                {'country': 'ENG', 'wins': 709},
-                {'country': 'POR', 'wins': 687},
-                {'country': 'FRA', 'wins': 614},
-                {'country': 'ESP', 'wins': 613},
-                {'country': 'SUI', 'wins': 536},
-                {'country': 'CRO', 'wins': 405},
-                {'country': 'BEL', 'wins': 381},
-                {'country': 'DEN', 'wins': 223},
-                {'country': 'COL', 'wins': 193},
-                {'country': 'SRB', 'wins': 175},
-                {'country': 'URU', 'wins': 168},
-                {'country': 'MEX', 'wins': 156},
-                {'country': 'POL', 'wins': 105},
-                {'country': 'SWE', 'wins': 104},
-                {'country': 'KOR', 'wins': 99},
-                {'country': 'AUS', 'wins': 91},
-                {'country': 'IRN', 'wins': 87},
-                {'country': 'JPN', 'wins': 86},
-                {'country': 'KSA', 'wins': 81},
-                {'country': 'CRC', 'wins': 64},
-                {'country': 'NGA', 'wins': 57},
-                {'country': 'SEN', 'wins': 36}, 
-                {'country': 'TUN', 'wins': 32},
-                {'country': 'PAN', 'wins': 31},
-                {'country': 'EGY', 'wins': 26},
-                {'country': 'MAR', 'wins': 22},
-                {'country': 'ISL', 'wins': 16},
-                {'country': 'PER', 'wins': 15} 
+                {'country': 'ARG', 'wins': 1382},
+                {'country': 'BRA', 'wins': 1367},
+                {'country': 'ESP', 'wins': 1052},
+                {'country': 'ENG', 'wins': 987},
+                {'country': 'POR', 'wins': 986},
+                {'country': 'GER', 'wins': 790},
+                {'country': 'FRA', 'wins': 778},
+                {'country': 'BEL', 'wins': 481},
+                {'country': 'RUS', 'wins': 472},
+                {'country': 'CRO', 'wins': 344},
+                {'country': 'SUI', 'wins': 325},
+                {'country': 'COL', 'wins': 148},
+                {'country': 'POL', 'wins': 110},
+                {'country': 'URU', 'wins': 102},
+                {'country': 'SRB', 'wins': 95},
+                {'country': 'MEX', 'wins': 91},
+                {'country': 'DEN', 'wins': 84},
+                {'country': 'JPN', 'wins': 81},
+                {'country': 'SWE', 'wins': 65},
+                {'country': 'KOR', 'wins': 64},
+                {'country': 'NGA', 'wins': 35},
+                {'country': 'KSA', 'wins': 27},
+                {'country': 'IRN', 'wins': 24},
+                {'country': 'AUS', 'wins': 20},
+                {'country': 'SEN', 'wins': 20},
+                {'country': 'CRC', 'wins': 19},
+                {'country': 'TUN', 'wins': 16},
+                {'country': 'EGY', 'wins': 10},
+                {'country': 'MAR', 'wins': 10},
+                {'country': 'PAN', 'wins': 6},
+                {'country': 'ISL', 'wins': 5},
+                {'country': 'PER', 'wins': 3}
             ]
 
             x.domain(data.map(function(d) { return d.country; }));
@@ -418,18 +410,124 @@
                     .attr("text-anchor", "middle")  
                     .style("font-size", "24px") 
                     //.style("text-decoration", "underline")  
-                    .text("Wins per Team (10000 Tounament Simulations)");
-          
-             
+                    .text("Wins per Team (10000 Tounament Simulations) with Power Ranking");             
+        </script>
+
+<script>
+ 
+        var margin = {top: 20, right: 20, bottom: 50, left: 80},
+            //width = 960 - margin.left - margin.right,
+            width = d3.select('#group_table')[0][0].clientWidth- margin.left - margin.right,
+            height = 400 - margin.top - margin.bottom;
+         
+        var x = d3.scale.ordinal()
+            .rangeRoundBands([0, width], .1);
+         
+        var y = d3.scale.linear()
+            .range([height, 0 + margin.top ]);
+         
+        var xAxis = d3.svg.axis()
+            .scale(x)
+            .orient("bottom");
+         
+        var yAxis = d3.svg.axis()
+            .scale(y)
+            .orient("left")
+            .ticks(10); //  .ticks(10, "%");
+         
+        var svg = d3.select("#bar-chart-no-power").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 
+        var data_no_power_ranking = [
+            {'country': 'BRA', 'wins': 1248},
+            {'country': 'ARG', 'wins': 1101},
+            {'country': 'GER', 'wins': 952},
+            {'country': 'RUS', 'wins': 887},
+            {'country': 'ENG', 'wins': 709},
+            {'country': 'POR', 'wins': 687},
+            {'country': 'FRA', 'wins': 614},
+            {'country': 'ESP', 'wins': 613},
+            {'country': 'SUI', 'wins': 536},
+            {'country': 'CRO', 'wins': 405},
+            {'country': 'BEL', 'wins': 381},
+            {'country': 'DEN', 'wins': 223},
+            {'country': 'COL', 'wins': 193},
+            {'country': 'SRB', 'wins': 175},
+            {'country': 'URU', 'wins': 168},
+            {'country': 'MEX', 'wins': 156},
+            {'country': 'POL', 'wins': 105},
+            {'country': 'SWE', 'wins': 104},
+            {'country': 'KOR', 'wins': 99},
+            {'country': 'AUS', 'wins': 91},
+            {'country': 'IRN', 'wins': 87},
+            {'country': 'JPN', 'wins': 86},
+            {'country': 'KSA', 'wins': 81},
+            {'country': 'CRC', 'wins': 64},
+            {'country': 'NGA', 'wins': 57},
+            {'country': 'SEN', 'wins': 36}, 
+            {'country': 'TUN', 'wins': 32},
+            {'country': 'PAN', 'wins': 31},
+            {'country': 'EGY', 'wins': 26},
+            {'country': 'MAR', 'wins': 22},
+            {'country': 'ISL', 'wins': 16},
+            {'country': 'PER', 'wins': 15} 
+        ]
 
-            function type(d) {
-              d.revenue = +d.revenue;
-              return d;
-            }
-             
-            </script>
+        x.domain(data_no_power_ranking.map(function(d) { return d.country; }));
+        y.domain([0, d3.max(data_no_power_ranking, function(d) { return d.wins; })]);
+         
+        svg.append("g")
+            .attr("class", "x axis")
+            .attr("transform", "translate(0," + height + ")")
+            .call(xAxis)
+            .selectAll("text")  
+            .style("text-anchor", "end")
+            .attr("dx", "-.8em")
+            .attr("dy", ".15em")
+            .attr("transform", "rotate(-65)" )
+            .append("text")             // text label for the x axis
+            .attr("x", (width / 2) )
+            .attr("y",  20 )
+            .attr("dy", "1em")
+            .style("text-anchor", "middle")
+            .style("font-size", "16px") 
+            .text("TEAMS");
+                
+         // add y-axis
+        svg.append("g")
+            .attr("class", "y axis")
+            .call(yAxis)
+            .append("text") // and text1
+            .attr("y", 6)
+            .attr("dy", ".71em")
+            .style("text-anchor", "end")
+            .style("font-size", "16px") 
+            .text("Wins");
+         
+        svg.selectAll(".bar")
+            .data(data_no_power_ranking)
+            .enter().append("rect")
+            .attr("class", "bar")
+            .attr("x", function(d) { return x(d.country); })
+            .attr("width", x.rangeBand())
+            .attr("y", function(d) { return y(d.wins); })
+            .attr("height", function(d) { return height - y(d.wins); });
+
+
+        // add a title
+        svg.append("text")
+                .attr("x", (width / 2))             
+                .attr("y", 0 + (margin.top / 2))
+                .attr("text-anchor", "middle")  
+                .style("font-size", "24px") 
+                //.style("text-decoration", "underline")  
+                .text("Wins per Team (10000 Tounament Simulations) without Power Ranking");
+         
+        </script>
             
 
 
@@ -480,6 +578,7 @@
             </div>
         </div>
     </div>
+
 
 
 
@@ -793,13 +892,13 @@
             }     
             
             if (df.data[i][0] == 'GQF4'){
-                $('#WB1A2').html('' + df.data[i][2] + '<img src="/static/img/' + df.data[i][2] + '.png" width="50" height="25">');
-                $('#WD1C2').html('' + df.data[i][3] + '<img src="/static/img/' + df.data[i][3] + '.png" width="50" height="25">');
+                $('#WB1A2').html('' + '<img src="/static/img/' + df.data[i][2] + '.png" width="50" height="25">'+ df.data[i][2] );
+                $('#WD1C2').html('' + '<img src="/static/img/' + df.data[i][3] + '.png" width="50" height="25">'+ df.data[i][3] );
             }
 
             if (df.data[i][0] == 'GQF3'){
-                $('#WH1G2').html('' + df.data[i][2] + '<img src="/static/img/' + df.data[i][2] + '.png" width="50" height="25">');
-                $('#WF1E2').html('' + df.data[i][3] + '<img src="/static/img/' + df.data[i][3] + '.png" width="50" height="25">');
+                $('#WH1G2').html('' + '<img src="/static/img/' + df.data[i][2] + '.png" width="50" height="25">' + df.data[i][2] );
+                $('#WF1E2').html('' + '<img src="/static/img/' + df.data[i][3] + '.png" width="50" height="25">' + df.data[i][3] );
             }
 
             if (df.data[i][0] == 'GSF1'){
@@ -807,13 +906,13 @@
                 $('#SEM1').html('' + df.data[i][3] + '<img src="/static/img/' + df.data[i][3] + '.png" width="50" height="25">');
             }  
             if (df.data[i][0] == 'GSF2'){
-                $('#sem2').html('' + df.data[i][2] + '<img src="/static/img/' + df.data[i][2] + '.png" width="50" height="25">');
-                $('#SEMI4').html('' + df.data[i][3] + '<img src="/static/img/' + df.data[i][3] + '.png" width="50" height="25">');
+                $('#sem2').html('' + '<img src="/static/img/' + df.data[i][2] + '.png" width="50" height="25">' + df.data[i][2] );
+                $('#SEMI4').html('' + '<img src="/static/img/' + df.data[i][3] + '.png" width="50" height="25">'+ df.data[i][3] );
             }
 
             if (df.data[i][0] == 'GFN1'){
                 $('#FINAL1').html('' + df.data[i][2] + '<img src="/static/img/' + df.data[i][2] + '.png" width="50" height="25">');
-                $('#FINAL2').html('' + df.data[i][3] + '<img src="/static/img/' + df.data[i][3] + '.png" width="50" height="25">');
+                $('#FINAL2').html('' + '<img src="/static/img/' + df.data[i][3] + '.png" width="50" height="25">' + df.data[i][3] );
 
                 console.log(df.data[i][5])
 
