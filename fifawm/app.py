@@ -4,7 +4,7 @@
 
 
 from __future__ import print_function
-from flask import Flask, render_template, request, Response, send_file
+from flask import Flask, render_template, request, Response, send_file, jsonify
 # from flask.ext.sqlalchemy import SQLAlchemy
 import logging
 from logging import Formatter, FileHandler
@@ -63,15 +63,30 @@ def home():
     groupg = new_df.loc[new_df['group'] == 'G'].to_html(index=False)
     grouph = new_df.loc[new_df['group'] == 'H'].to_html(index=False)
 
+    onea = group_winners.get("1A")
+    twoa = group_winners.get("2A")
+    oneb = group_winners.get("1B")
+    twob = group_winners.get("2B")
+    onec = group_winners.get("1C")
+    twoc = group_winners.get("2C")
+    oned = group_winners.get("1D")
     twod = group_winners.get("2D")
-    print(twod)
+    onee = group_winners.get("1E")
+    twoe = group_winners.get("2E")
+    onef = group_winners.get("1F")
+    twof = group_winners.get("2F")
+    oneg = group_winners.get("1G")
+    twog = group_winners.get("2G")
+    oneh = group_winners.get("1H")
+    twoh = group_winners.get("2H")
+
 
     return render_template('pages/placeholder.home.html', groupa=groupa, groupb=groupb, groupc=groupc, groupd=groupd,
-                           groupe=groupe, groupf=groupf, groupg=groupg, grouph=grouph, twod=twod)
+                           groupe=groupe, groupf=groupf, groupg=groupg, grouph=grouph, onea=onea, twoa=twoa, oneb=oneb,
+                           twob=twob, onec=onec, twoc=twoc,oned=oned,twod=twod,onee=onee,twoe=twoe,onef=onef,twof=twof,
+                           oneg=oneg,twog=twog,oneh=oneh,twoh=twoh, group_table_total=group_table_total)
 
-@app.route('/get_tournament', methods=["GET"])
-def get_tournament():
-    tourney.get_tournament_prediction()
+
 
 
 from flask import jsonify
