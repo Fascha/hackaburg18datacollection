@@ -2,8 +2,37 @@
 {% block title %} FIFA world cup 18{% endblock %}
 {% block content %}
 
+
+<style>
+table {
+    border-bottom: 1px solid #ddd;
+    text-align: center
+
+
+}
+table:hover {background-color: #f5f5f5;}
+.btnbtn-sm{
+
+  -webkit-border-radius: 45;
+  -moz-border-radius: 45;
+  border-radius: 45px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 14px;
+  background: #d3d3d3;
+  text-decoration: none;
+
+}
+
+.btnbtn-sm:hover{
+  background: #bebebe;
+  text-decoration: none;
+}
+
+
+</style>
 <div class="page-header">
-    <h1>Groups <a href="/get_tournament"><button type="button" class="btn btn-primary">simulate again</button></a> </h1>
+    <h1>Groups <a href="/"><button type="button" class="btn btn-primary">simulate again</button></a> </h1>
 </div>
 
     <div class="container" id="group_table" >
@@ -11,7 +40,7 @@
             <div class="col">
                 <table>
                     <tr><td>Group A </td><td></td><td>
-                        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_a" style="color:#f3f3f3" id="btndt_a">
+                        <button type="button" class="btnbtn-sm" data-toggle="modal" data-target="#modal_a" style="color:#f3f3f3" id="btndt_a">
                             <p style="color: #000;">details</p>
                         </button></td></tr>
                 </table>
@@ -22,7 +51,7 @@
             <div class="col">
                  <table>
                     <tr><td>Group B</td><td></td><td>
-                        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_b" style="color:#f3f3f3"  id="btndt_b">
+                        <button type="button" class="btnbtn-sm" data-toggle="modal" data-target="#modal_b" style="color:#f3f3f3"  id="btndt_b">
                             <p style="color: #000;">details</p>
                         </button></td></tr>
                  </table>
@@ -34,7 +63,7 @@
             <div class="col">
                  <table>
                     <tr><td>Group C</td><td></td><td>
-                        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_c" style="color:#f3f3f3"  id="btndt_c">
+                        <button type="button" class="btnbtn-sm" data-toggle="modal" data-target="#modal_c" style="color:#f3f3f3"  id="btndt_c">
                             <p style="color: #000;">details</p>
                         </button></td></tr>
                     </table>
@@ -45,7 +74,7 @@
             <div class="col">
                  <table>
                     <tr><td>Group D</td><td></td><td>
-                        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_d" style="color:#f3f3f3;"  id="btndt_d">
+                        <button type="button" class="btnbtn-sm" data-toggle="modal" data-target="#modal_d" style="color:#f3f3f3;"  id="btndt_d">
                             <p style="color: #000;">details</p>
                         </button></td></tr>
                  </table>
@@ -60,7 +89,7 @@
             <div class="col">
                  <table>
                     <tr><td>Group E</td><td></td><td>
-                        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_e" style="color:#f3f3f3; none"  id="btndt_e">
+                        <button type="button" class="btnbtn-sm" data-toggle="modal" data-target="#modal_e" style="color:#f3f3f3; none"  id="btndt_e">
                             <p style="color: #000;">details</p>
                         </button></td></tr>
                     </table>
@@ -71,7 +100,7 @@
             <div class="col">
                  <table>
                     <tr><td>Group F</td><td></td><td>
-                        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_f" style="color:#f3f3f3"  id="btndt_f">
+                        <button type="button" class="btnbtn-sm" data-toggle="modal" data-target="#modal_f" style="color:#f3f3f3"  id="btndt_f">
                             <p style="color: #000;">details</p>
                         </button></td></tr>
                     </table>
@@ -81,7 +110,7 @@
             <div class="col">
                  <table>
                     <tr><td>Group G</td><td></td><td>
-                        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_g" style="color:#f3f3f3"  id="btndt_g">
+                        <button type="button" class="btnbtn-sm" data-toggle="modal" data-target="#modal_g" style="color:#f3f3f3"  id="btndt_g">
                             <p style="color: #000;">details</p>
                         </button></td></tr>
                     </table>
@@ -91,7 +120,7 @@
             <div class="col">
                  <table>
                     <tr><td>Group H</td><td></td><td>
-                        <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_h" style="color:#f3f3f3"  id="btndt_h">
+                        <button type="button" class="btnbtn-sm" data-toggle="modal" data-target="#modal_h" style="color:#f3f3f3"  id="btndt_h">
                             <p style="color: #000;">details</p>
                         </button></td></tr>
                     </table>
@@ -102,7 +131,7 @@
     </div>
     <br><br><br>
     <div class="page-header">
-        <h1>Matchplan <button type="button" class="btn btn-primary" onclick="setTimeout(start_show, 3000)">PLAY</button></h1>
+        <h1>Matchplan</h1>
 
     </div>
     <div id="match_plan" style="font-size: large">
@@ -249,7 +278,7 @@
             <div class="col"></div>
             <div class="col"></div>
             <div class="col"></div>
-            <div class="col" id="SEMI">
+            <div class="col">
                 <table>
                     <tr id="WINNER"></tr>
                 </table>
@@ -560,21 +589,6 @@
     </div>
 
 
-    <div class="page-header">
-        <h1>Adjust <button type="button" class="btn btn-primary" onclick="adjust_settings">PLAY</button></h1>
-
-    </div>
-    <div id="user_input">
-        <div class="row">
-            <div class="col"></div>
-            <div class="col">
-                <input id="slider1"  type="range" />
-                <input id="slider1"  type="range" />
-                <input id="slider1"  type="range" />
-            </div>
-        </div>
-    </div>
-
 
 
 
@@ -769,12 +783,8 @@
         $(document).ready(function () {
             populateEliminationRound();
             // fill static groups
-
-
-
             var table_data = {{ group_table_total |safe  }};    
             table_data = {{ group_table_total |safe  }}
-
 
             $("#table_ga").html(makeTableHTML(table_data.A));
             $("#table_gb").html(makeTableHTML(table_data.B));
@@ -784,7 +794,6 @@
             $("#table_gf").html(makeTableHTML(table_data.F));
             $("#table_gg").html(makeTableHTML(table_data.G));
             $("#table_gh").html(makeTableHTML(table_data.H));
-
 
         });
     
@@ -814,13 +823,12 @@
         $("#btndt_f").show()
         $("#btndt_g").show()
         $("#btndt_h").show()
-        asd();
     }
 
 
 
     function makeTableHTML(myArray) {
-    var result = '<table border=1>';
+    var result = '<table><tr><td>team</td><td></td><td>scored</td><td>conceded</td><td>points</td><tr>';
     for(var i=0; i<myArray.length; i++) {
         result += "<tr>";
         for(var j=0; j<myArray[i].length; j++){
@@ -842,17 +850,7 @@
         var style_winner = "green";
         var style_looser = "firebrick"
         for (var i = 0; i < df.data.length; i++){
-            /*
-            ["GAF1", "30/06/2018", "RUS", "IRN", null, "4-1"]
-(6) ["GAF2", "30/06/2018", "AUS", "ISL", null, "3-0"]
-(6) ["GAF3", "01/07/2018", "POR", "URU", null, "3-0"]
-(6) ["GAF4", "01/07/2018", "NGA", "FRA", null, "1-2"]
 
-(6) ["GAF5", "02/07/2018", "BRA", "GER", null, "1-0"]
-(6) ["GAF6", "02/07/2018", "ENG", "POL", null, "2-1"]
-(6) ["GAF7", "03/07/2018", "SWE", "CRC", null, "0-2"]
-(6) ["GAF8", "03/07/2018", "JPN", "BEL", null, "2-1"]
-*/
             if (df.data[i][0] == 'GAF1') {
 
                 $('#A1').html($('#A1').html() + df.data[i][5].split('-')[0])
