@@ -437,18 +437,31 @@
     <br><br><br>
 
     <div>
-        <h2>Model Description</h2>
-        <p>We are using multivariant Regression with a Random Forest Algorithm implemented in sklear to predict the score of a match given the two teams.</p>
+        <h2>Random Forest Model Description</h2>
+        <p>We are using multivariant Regression with a Random Forest Algorithm implemented in sklear to predict the score of a match based on historical performance of the two teams.</p>
         <ul>
             <lh>Features used [3 Variants - Short(10)|Mid(30)|Long(50)]:</lh>
-            <li>Goals scored</li>
-            <li>Goals conceded</li>
-            <li>Winpercentage total</li>
+            <li>Goals scored(Team1/Team2)</li>
+            <li>Goals conceded(Team1/Team2)</li>
+            <li>Goal difference</li>
+            <li>Winpercentage total(Team1/Team2)</li>
             <li>Winpercentage against opponent (if available)</li>
+        </ul>
+
+        <h2>Power Ranking</h2>
+        <ul>
+            <li>Using a Feed Forward Neural Network to predict the influence of Players on the Performance of the Team</li>
+            <li>Applying multiple PowerRankings of the qualified Teams</li>
+            <li>Applying betting odds</li>
         </ul>
 
         <ul>
             <lh>Data used and preprocessing:</lh>
+        </ul>
+        <h2>Simulating the Tournament</h2>
+        <ul>
+            <li>Running a Monte Carlo Simulation of the official Schedule (10000 times)</li>
+            <li>Draw allowed in Group Stage - In Eleimination ROund we roll the Dice because we are missing penalty Data</li>
         </ul>
     </div>
 
