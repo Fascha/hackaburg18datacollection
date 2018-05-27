@@ -88,6 +88,7 @@ def home():
 
 
 
+
 @app.route('/about')
 def about():
     return render_template('pages/placeholder.about.html')
