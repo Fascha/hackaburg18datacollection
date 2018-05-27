@@ -14,10 +14,9 @@
                         <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_a" style="color:#f3f3f3" id="btndt_a">
                             <p style="color: #000;">details</p>
                         </button></td></tr>
-                    <tr id = "A1"></tr>
-                    <tr id = "A2"> </tr>
-                    <tr id = "A3"></tr>
-                    <tr id = "A4"></tr>
+                </table>
+                <table id="table_ga">
+
                 </table>
             </div>
             <div class="col">
@@ -26,10 +25,10 @@
                         <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_b" style="color:#f3f3f3"  id="btndt_b">
                             <p style="color: #000;">details</p>
                         </button></td></tr>
-                    <tr id = "B1"></tr>
-                    <tr id = "B2"></tr>
-                    <tr id = "B3"></tr>
-                    <tr id = "B4"></tr>
+                 </table>
+                <table id="table_gb">
+
+                </table>
                 </table>
             </div>
             <div class="col">
@@ -38,10 +37,9 @@
                         <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_c" style="color:#f3f3f3"  id="btndt_c">
                             <p style="color: #000;">details</p>
                         </button></td></tr>
-                    <tr id = "C1"></tr>
-                    <tr id = "C2"></tr>
-                    <tr id = "C3"></tr>
-                    <tr id = "C4"></tr>
+                    </table>
+                <table id="table_gc">
+
                 </table>
             </div>
             <div class="col">
@@ -50,10 +48,9 @@
                         <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_d" style="color:#f3f3f3;"  id="btndt_d">
                             <p style="color: #000;">details</p>
                         </button></td></tr>
-                    <tr id = "D1"></tr>
-                    <tr id = "D2">{{ dtwo }}</tr>
-                    <tr id = "D3"></tr>
-                    <tr id = "D4"></tr>
+                 </table>
+                <table id="table_gd">
+
                 </table>
             </div>
         </div>
@@ -66,10 +63,9 @@
                         <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_e" style="color:#f3f3f3; none"  id="btndt_e">
                             <p style="color: #000;">details</p>
                         </button></td></tr>
-                    <tr id = "E1"></tr>
-                    <tr id = "E2"></tr>
-                    <tr id = "E3"></tr>
-                    <tr id = "E4"></tr>
+                    </table>
+                <table id="table_ge">
+
                 </table>
             </div>
             <div class="col">
@@ -78,10 +74,8 @@
                         <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_f" style="color:#f3f3f3"  id="btndt_f">
                             <p style="color: #000;">details</p>
                         </button></td></tr>
-                    <tr id = "F1"></tr>
-                    <tr id = "F2"></tr>
-                    <tr id = "F3"></tr>
-                    <tr id = "F4"></tr>
+                    </table>
+                <table id="table_gf">
                 </table>
             </div>
             <div class="col">
@@ -90,10 +84,8 @@
                         <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_g" style="color:#f3f3f3"  id="btndt_g">
                             <p style="color: #000;">details</p>
                         </button></td></tr>
-                    <tr id = "G1"></tr>
-                    <tr id = "G2"></tr>
-                    <tr id = "G3"></tr>
-                    <tr id = "G4"></tr>
+                    </table>
+                <table id="table_gg">
                 </table>
             </div>
             <div class="col">
@@ -102,10 +94,8 @@
                         <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal_h" style="color:#f3f3f3"  id="btndt_h">
                             <p style="color: #000;">details</p>
                         </button></td></tr>
-                    <tr id = "H1"></tr>
-                    <tr id = "H2"></tr>
-                    <tr id = "H3"></tr>
-                    <tr id = "H4"></tr>
+                    </table>
+                <table id="table_gh">
                 </table>
             </div>
         </div>
@@ -117,13 +107,13 @@
     </div>
     <div id="match_plan" style="font-size: large">
         <div class="row">
-            <div class="col" id="A1_1">1st A</div>
+            <div class="col" id="A1">{{ onea }}<img src="/static/img/{{ onea }}.png" width="50" height="25"></div>
             <div class="col"></div>
             <div class="col"></div>
             <div class="col"></div>
             <div class="col"></div>
             <div class="col"></div>
-            <div class="col" id="B1">1st B</div>
+            <div class="col" id="B1"><img src="/static/img/{{ oneb }}.png" width="50" height="25">{{ oneb }}</div>
         </div>
         <div class="row">
             <div class="col"></div>
@@ -135,13 +125,13 @@
             <div class="col"></div>
         </div>
         <div class="row">
-            <div class="col" id="B2">2nd B</div>
+            <div class="col" id="B2">{{ twob }}<img src="/static/img/{{ twob }}.png" width="50" height="25"></div>
             <div class="col"></div>
             <div class="col"></div>
             <div class="col"></div>
             <div class="col"></div>
             <div class="col"></div>
-            <div class="col" id="A2">2nd A</div>
+            <div class="col" id="A2"><img src="/static/img/{{ twoa }}.png" width="50" height="25">{{ twoa }}</div>
         </div>
         <div class="row">
             <div class="col"></div>
@@ -153,13 +143,13 @@
             <div class="col"></div>
         </div>
         <div class="row">
-            <div class="col" id="C1">1st C</div>
+            <div class="col" id="C1">{{ onec }}<img src="/static/img/{{ onec }}.png" width="50" height="25"></div>
             <div class="col"></div>
             <div class="col"></div>
             <div class="col"></div>
             <div class="col"></div>
             <div class="col"></div>
-            <div class="col" id="D1">1st D</div>
+            <div class="col" id="D1"><img src="/static/img/{{ oned }}.png" width="50" height="25">{{ oned }}</div>
         </div>
         <div class="row">
             <div class="col"></div>
@@ -171,13 +161,13 @@
             <div class="col"></div>
         </div>
         <div class="row">
-            <div class="col" id="D2">2nd D</div>
+            <div class="col" id="D2">{{ twod }}<img src="/static/img/{{ twod }}.png" width="50" height="25"></div>
             <div class="col"></div>
             <div class="col"></div>
             <div class="col"></div>
             <div class="col"></div>
             <div class="col"></div>
-            <div class="col" id="C2">2nd C</div>
+            <div class="col" id="C2"><img src="/static/img/{{ twoc }}.png" width="50" height="25">{{ twoc }}</div>
         </div>
         <div class="row">
             <div class="col"></div>
@@ -194,13 +184,13 @@
             <div class="col"></div>
         </div>
         <div class="row">
-            <div class="col" id="E1">1st E</div>
+            <div class="col" id="E1">{{ onee }}<img src="/static/img/{{ onee }}.png" width="50" height="25"></div>
             <div class="col"></div>
             <div class="col"></div>
             <div class="col"></div>
             <div class="col"></div>
             <div class="col"></div>
-            <div class="col" id="F1">1st F</div>
+            <div class="col" id="F1"><img src="/static/img/{{ onef }}.png" width="50" height="25">{{ onef }}</div>
         </div>
         <div class="row">
             <div class="col"></div>
@@ -212,13 +202,13 @@
             <div class="col"></div>
         </div>
         <div class="row">
-            <div class="col" id="F2">2nd F</div>
+            <div class="col" id="F2">{{ twof }}<img src="/static/img/{{ twof }}.png" width="50" height="25"></div>
             <div class="col"></div>
             <div class="col"></div>
             <div class="col"></div>
             <div class="col"></div>
             <div class="col"></div>
-            <div class="col" id="E2">2nd E</div>
+            <div class="col" id="E2"><img src="/static/img/{{ twoe }}.png" width="50" height="25">{{ twoe }}</div>
         </div>
         <div class="row">
             <div class="col"></div>
@@ -230,13 +220,13 @@
             <div class="col"></div>
         </div>
         <div class="row">
-            <div class="col" id="G1">1st G</div>
+            <div class="col" id="G1">{{ oneg }}<img src="/static/img/{{ oneg }}.png" width="50" height="25"></div>
             <div class="col"></div>
             <div class="col"></div>
             <div class="col"></div>
             <div class="col"></div>
             <div class="col"></div>
-            <div class="col" id="H1">1st H</div>
+            <div class="col" id="H1"><img src="/static/img/{{ oneh }}.png" width="50" height="25">{{ oneh }}</div>
         </div>
         <div class="row">
             <div class="col"></div>
@@ -248,13 +238,13 @@
             <div class="col"></div>
         </div>
         <div class="row">
-            <div class="col" id="h2">2nd H</div>
+            <div class="col" id="h2">{{ twoh }}<img src="/static/img/{{ twoh }}.png" width="50" height="25"></div>
             <div class="col"></div>
             <div class="col"></div>
             <div class="col"></div>
             <div class="col"></div>
             <div class="col"></div>
-            <div class="col" id="g2">2nd G</div>
+            <div class="col" id="g2"><img src="/static/img/{{ twog }}.png" width="50" height="25">{{ twog }}</div>
         </div>
         <div class="row">
             <div class="col"></div>
@@ -524,7 +514,16 @@
             $("#H3").html(get_conchtml_table("COL", ""));
             $("#H4").html(get_conchtml_table("JPN", ""));
 
+            table_data = {{ group_table_total |safe  }}
 
+            $("#table_ga").html(makeTableHTML(table_data.A));
+            $("#table_gb").html(makeTableHTML(table_data.B));
+            $("#table_gc").html(makeTableHTML(table_data.C));
+            $("#table_gd").html(makeTableHTML(table_data.D));
+            $("#table_ge").html(makeTableHTML(table_data.E));
+            $("#table_gf").html(makeTableHTML(table_data.F));
+            $("#table_gg").html(makeTableHTML(table_data.G));
+            $("#table_gh").html(makeTableHTML(table_data.H));
 
 
         });
@@ -538,7 +537,6 @@
     }
 
     function start_show() {
-        $("#A1_1").html(get_conchtml_plan("RUS", " 4"));
     }
     function load_gtables() {
         show_buttons();
@@ -558,6 +556,28 @@
         $("#btndt_h").show()
 
     }
+
+
+
+    function makeTableHTML(myArray) {
+    var result = '<table border=1>';
+    for(var i=0; i<myArray.length; i++) {
+        result += "<tr>";
+        for(var j=0; j<myArray[i].length; j++){
+            if (j==0){result+='<td><img src="/static/img/' +myArray[i][0]+ '.png" width=30 height=10>'}
+            result += "<td>"+myArray[i][j]+"</td>";
+        }
+        result += "</tr>";
+    }
+    result += "</table>";
+
+    return result;
+}
+
+
+
+
+
 
     </script>
 {% endblock %}
